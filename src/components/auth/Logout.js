@@ -9,10 +9,15 @@ export class Logout extends Component {
     logout: PropTypes.func.isRequired
   };
 
+  clickHandler = async() =>{
+    await this.props.logout()
+    this.props.reloadFunct();
+  }
+
   render() {
     return (
       <Fragment>
-        <NavLink onClick={this.props.logout} href='#'>
+        <NavLink onClick={this.clickHandler} href='#'>
           Logout
         </NavLink>
       </Fragment>

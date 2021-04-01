@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import { NavLink,Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, connect } from 'react-redux';
 import UserChecker from '../models/userChecker';
 import  Logout  from './auth/Logout';
 import  LoginModal from './auth/LoginModal';
@@ -28,6 +28,10 @@ const Navbar = () => {
         
     },[])
 
+    const reloadFunct = () =>{
+        window.location.reload(false);
+    }
+
     return (
         <nav className="navbar navbar-expand-md navbar-dark" id = "siteNav">
                 <a className="navbar-brand logo" href="/">tpq</a>
@@ -37,23 +41,25 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarsExample04">
                     <ul className="navbar-nav mr-auto">
+                        
+                        {isAthenticated ? 
+                        <>
                         <li className="nav-item">
                             <NavLink exact to="/questions" className="nav-link font-weight-bolder">Questions</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink exact to="/users" className="nav-link font-weight-bolder">Users</NavLink>
                         </li>
-                        
-                        {isAthenticated ? 
                         <li>
                             <div>
-                                <Logout/>
+                                <Logout reloadFunct={reloadFunct}/>
                             </div>
                         </li>
+                        </>
                         :
                         <li>
                             <div>
-                                <LoginModal/>
+                                <LoginModal reloadFunct={reloadFunct}/>
                             </div>
                         </li>
                         }
@@ -71,5 +77,6 @@ const Navbar = () => {
             </nav>
     );
 }
+
 
 export default Navbar;
