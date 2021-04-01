@@ -47,6 +47,7 @@ class RegisterModal extends Component {
     if (this.state.modal) {
       if (isAuthenticated) {
         this.toggle();
+        this.props.reloadFunct();
       }
     }
   }

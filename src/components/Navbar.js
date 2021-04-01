@@ -65,7 +65,7 @@ const Navbar = () => {
                         }
                         {!isAthenticated && 
                         <li className="nav-item">
-                            <RegisterModal/>
+                            <RegisterModal reloadFunct={reloadFunct}/>
                         </li>}
                         {isAthenticated && 
                         <li className="nav-item">
