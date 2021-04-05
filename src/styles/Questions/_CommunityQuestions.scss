@@ -1,0 +1,43 @@
+.allQuestions{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.community-questions .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.community-questions .filter_add_buttons{
+    align-self: center;
+}
+.community-questions .container button{
+    margin: 0px 10px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: $mainColor;
+    width: 18rem;
+    margin: 10px;
+    padding: .5vw;
+}
+.community-questions .card-title{
+    align-self: center;
+}
+
+.questions-by-category .cards-holder{
+    display: flex;
+}
+
+.allYoutubeVideos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.youtubeVideo{
+    margin: 10px;
+}

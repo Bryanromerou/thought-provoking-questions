@@ -1,0 +1,14 @@
+$base-font: "montserrat";
+/* Social Colors */
+$facebook: #3b5998;
+$twitter: #55acee;
+$instagram: #517fa4;
+$linkedin: #0077b5;
+$mainColor: #1b1b1de0;
+
+@import "./_GlobalStyles";
+@import "./_Navbar";
+@import "./_Home";
+@import "./Questions/_CommunityQuestions";
+@import "./Questions/_QuestionForm";
+@import "./Questions/_ShowQuestion";

@@ -1,0 +1,29 @@
+.homepage{
+    display: flex;
+    height: 100%;
+    z-index: -2;
+    display: grid;
+    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-rows: 15% 500px auto;
+}
+.homepage-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.493);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    top: 1000px;
+}
+
+.homepage-quote{
+    padding: 10px;
+    background-color: #cccccc;
+    color: black;
+}
+
+.homepage-title{
+    color: #c5c5c5;
+}
